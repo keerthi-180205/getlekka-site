@@ -1,0 +1,469 @@
+{
+  "common": {
+    "brandName": "GetLekka",
+    "tagline": "Speak. Get your Lekka ready.",
+    "taglineSub": "Being built to make everyday accounts simple for small shopkeepers in India.",
+    "joinPilot": "Join free pilot",
+    "seeHowItWorks": "See how it works",
+    "madeIn": "Made in Karnataka 🇮🇳",
+    "copyright": "© 2026 GetLekka. All rights reserved.",
+    "email": "getlekka.hello@gmail.com",
+    "plannedPricingNotice": "Planned pricing after pilot — may change",
+    "freeDuringPilot": "Free during the pilot",
+    "langSwitch": "ಕನ್ನಡ",
+    "backHome": "Back to Home",
+    "skipToContent": "Skip to content"
+  },
+  "nav": {
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "about": "About",
+    "pilot": "Join free pilot",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main navigation"
+  },
+  "hero": {
+    "badge": "Free pilot starting soon · Karnataka",
+    "subtitle": "Credit you gave Suresh, money Raju paid you — just say it in your own words. GetLekka records it and tells you who owes how much. No new app. No book to write in. Your WhatsApp is enough.",
+    "ctaPrimary": "Join the free pilot",
+    "ctaSecondary": "See how it works",
+    "mockup": {
+      "title": "GetLekka",
+      "voiceNoteShopkeeper": "Suresh ne 650 ka saaman liya, Friday dega",
+      "voiceDuration": "0:04",
+      "botResponseTitle": "Saved ✅ Suresh: +₹650",
+      "botResponseDue": "Total due: ₹1,100 · by Friday",
+      "undo": "Undo",
+      "questionShopkeeper": "Kaun kaun dena hai?",
+      "botResponseSummary": "5 customers owe you ₹3,200.",
+      "online": "online",
+      "ariaLabel": "Example WhatsApp chat with GetLekka (illustration)",
+      "caption": "An illustrative example of how the product works.",
+      "pause": "Pause animation",
+      "play": "Play animation"
+    },
+    "titleLead": "No more worrying about credit entries.",
+    "titleAccent": "Just speak, on WhatsApp.",
+    "points": [
+      "Speak in Kannada, Hindi or English",
+      "Free during the pilot",
+      "Your accounts stay in your control"
+    ]
+  },
+  "problem": {
+    "tag": "THE PROBLEM",
+    "heading": "Running the shop is hard work already. Why worry about credit books too?",
+    "intro": "So many transactions happen in your shop every day. Remembering all of them is not easy.",
+    "card1Title": "Writing accounts takes time",
+    "card1Desc": "Opening the book, finding the name and writing the amount, in the middle of work, is hard.",
+    "card2Title": "Small dues add up to big amounts",
+    "card2Desc": "₹100 today, ₹250 tomorrow, ₹500 another day. Small amounts add up, and you may not notice how much.",
+    "card3Title": "Confusion about who owes what",
+    "card3Desc": "Finding old entries, remembering past payments and telling customers their dues all take time.",
+    "closing": "Give more time to your business. Make your accounts simple."
+  },
+  "howItWorks": {
+    "tag": "HOW IT WORKS",
+    "heading": "Using GetLekka is simple — just speak.",
+    "step1Tag": "Step 1",
+    "step1Title": "Say it in your own words",
+    "step1Desc": "Send a WhatsApp voice message when you give credit or receive money. Example: \"Mahesh ne 500 de diya.\"",
+    "step2Tag": "Step 2",
+    "step2Title": "GetLekka records it",
+    "step2Desc": "GetLekka understands your note and records it in the right customer's account. It shows you the amount recorded and the new balance. If something is wrong, check the entry and tap Undo.",
+    "step3Tag": "Step 3",
+    "step3Title": "Know who owes what",
+    "step3Desc": "Ask \"Who owes how much?\" and get all customer balances in one message. You can also get a payment reminder ready, and send it yourself from your own WhatsApp."
+  },
+  "features": {
+    "tag": "EVERYTHING YOU NEED",
+    "heading": "Simple tools for your shop's everyday accounts.",
+    "f1Title": "Voice credit book",
+    "f1Desc": "Instead of opening a book and writing, just speak. Record your accounts in Kannada, Hindi, English or a mix.",
+    "f2Title": "Payment reminders",
+    "f2Desc": "See who owes how much, and get a ready message with the amount and your UPI ID. Check it, then send it from your own WhatsApp.",
+    "f3Title": "Day-end calculator",
+    "f3Desc": "Say the day's amounts one by one. GetLekka adds them up and shows the total.",
+    "f4Title": "9 PM summary",
+    "f4Desc": "No need to keep checking the day's accounts. See the day's sales, credit given, money collected and pending dues in one summary.",
+    "f5Title": "Easy to correct",
+    "f5Desc": "Check every recorded entry. If something is wrong, tap Undo to take it back.",
+    "f6Title": "Everything inside WhatsApp",
+    "f6Desc": "No new app to download. Talk to GetLekka in the WhatsApp you already use."
+  },
+  "languagesStrip": {
+    "heading": "Speak in your language. GetLekka understands.",
+    "note": "More Indian languages coming later.",
+    "pills": [
+      "ಕನ್ನಡ",
+      "हिंदी",
+      "English",
+      "Mix"
+    ],
+    "sub": "You don't need to learn a new language to keep accounts. Speak the way you talk every day."
+  },
+  "trust": {
+    "tag": "TRUST & SAFETY",
+    "heading": "Your shop's accounts. Your control.",
+    "intro": "Trust matters when money is involved. That is why GetLekka only helps you keep records.",
+    "p1Title": "We don't need your UPI PIN.",
+    "p1": "We will never ask for your UPI PIN, OTP or bank password. Only your UPI ID is needed, to show in payment reminders.",
+    "p2Title": "Your money stays with you.",
+    "p2": "GetLekka never moves money on your behalf. It is only a tool to help you keep accounts and track dues.",
+    "p3Title": "You decide what gets sent.",
+    "p3": "GetLekka prepares the payment reminder. You check it and send it yourself.",
+    "p4Title": "We respect your information.",
+    "p4": "How your accounts data is collected and used is explained clearly in our Privacy Policy. You can ask us to delete your data at any time."
+  },
+  "pricingTeaser": {
+    "tag": "SIMPLE PLANS",
+    "heading": "Simple pricing for small shops. No confusion.",
+    "badge": "Free during the pilot",
+    "notice": "Planned after pilot · may change",
+    "basicTitle": "Basic",
+    "basicPrice": "₹149",
+    "basicPeriod": "/month",
+    "proTitle": "Pro",
+    "proPrice": "₹299",
+    "proPeriod": "/month",
+    "viewPricing": "View detailed pricing plans",
+    "plannedTag": "Planned",
+    "intro": "The free pilot in Karnataka is starting soon. We want to learn from the first pilot shops and improve GetLekka for your needs.",
+    "basicFeatures": [
+      "Up to 300 entries/month",
+      "Voice credit book in 3 languages",
+      "Customer balances at a glance",
+      "Polite payment reminders",
+      "Day-end calculator & 9 PM summary"
+    ],
+    "proFeatures": [
+      "Unlimited entries",
+      "Everything in Basic",
+      "Priority support"
+    ]
+  },
+  "faq": {
+    "tag": "FREQUENTLY ASKED QUESTIONS",
+    "heading": "Simple answers to your questions.",
+    "q1": "Do I need to install a new app?",
+    "a1": "No. GetLekka is designed to work through WhatsApp. There is nothing new to download.",
+    "q2": "Can I speak in Kannada?",
+    "a2": "Yes. You can speak in Kannada, Hindi or English, and you can mix them.",
+    "q3": "What if it records something wrong?",
+    "a3": "Check the recorded entry. If something is wrong, tap Undo to take it back.",
+    "q4": "Is my shop's account information safe?",
+    "a4": "We explain how we collect and use your information in our Privacy Policy. We never need your UPI PIN, OTP or bank password. You can ask us to delete your data at any time.",
+    "q5": "Will GetLekka message my customers directly?",
+    "a5": "No. GetLekka prepares the payment reminder. You check it and send it from your own WhatsApp.",
+    "q6": "How much does GetLekka cost?",
+    "a6": "It is free during the pilot. Planned prices after the pilot are Basic ₹149 and Pro ₹299 per month, and may change.",
+    "moreTitle": "Still have a question?"
+  },
+  "finalCta": {
+    "heading": "Ready to make your shop's accounts simpler?",
+    "sub": "Stop searching book pages for credit entries. Just speak — GetLekka helps you keep your accounts. Be one of the first pilot shops in Karnataka.",
+    "button": "Join the free pilot",
+    "badge": "Karnataka Pilot",
+    "note": "Free use and direct help during the pilot."
+  },
+  "pricingPage": {
+    "title": "Simple, honest pricing",
+    "banner": "Free for all pilot shops in Karnataka.",
+    "plannedBadge": "Planned pricing after pilot — may change",
+    "firstMonthFree": "First month free after pilot. No credit card required for the pilot.",
+    "faqHeading": "Pricing FAQs",
+    "faq1Q": "What counts as an entry?",
+    "faq1A": "Details will be shared before paid plans start.",
+    "faq2Q": "Can I cancel anytime?",
+    "faq2A": "Yes, you will have complete freedom to cancel or export your data at any time.",
+    "faq3Q": "Is GST included?",
+    "faq3A": "Details will be shared before paid plans start.",
+    "basicTitle": "Basic",
+    "basicPrice": "₹149",
+    "basicPeriod": "/month",
+    "basicFeatures": [
+      "Up to 300 entries/month",
+      "Voice credit book",
+      "Payment reminders",
+      "Day-end calculator",
+      "9 PM summary"
+    ],
+    "proTitle": "Pro",
+    "proPrice": "₹299",
+    "proPeriod": "/month",
+    "proFeatures": [
+      "Unlimited entries",
+      "Everything in Basic",
+      "Priority support"
+    ],
+    "cta": "Join the free pilot"
+  },
+  "aboutPage": {
+    "title": "About GetLekka",
+    "missionTag": "OUR MISSION",
+    "mission": "Help every small shop keep its accounts by simply speaking.",
+    "storyHeading": "Why we are building GetLekka",
+    "storyP1": "Small shops are the backbone of our neighborhoods in Karnataka and across India. Yet shopkeepers spend hours after exhausting 12-hour days balancing paper books or struggling with complex accounting software.",
+    "storyP2": "We believe technology should adapt to how people actually work, not the other way around. By bringing voice-based bookkeeping directly onto WhatsApp, GetLekka makes credit tracking as simple as talking to a neighbor.",
+    "locationBadge": "Proudly built in Karnataka 🇮🇳",
+    "storyP3": "[Founder's own story — to be added by Keerthi.]",
+    "ctaHeading": "Want to try it in your shop?",
+    "ctaButton": "Join the free pilot",
+    "contactLink": "Partners, mentors and press — contact us"
+  },
+  "pilotPage": {
+    "title": "Join the Free GetLekka Pilot",
+    "subtitle": "We are inviting selected shops across Karnataka to experience voice bookkeeping on WhatsApp for free.",
+    "nameLabel": "Your name",
+    "namePlaceholder": "e.g. Ramesh Kumar",
+    "shopNameLabel": "Shop name",
+    "shopNamePlaceholder": "e.g. Sri Lakshmi Provision Stores",
+    "shopTypeLabel": "Shop type",
+    "shopTypePlaceholder": "Select your shop type",
+    "shopTypes": {
+      "kirana": "Kirana / Grocery",
+      "medical": "Medical store",
+      "tailor": "Tailor / Boutique",
+      "salon": "Salon / Parlour",
+      "mobile": "Mobile repair & accessories",
+      "other": "Other retail"
+    },
+    "cityLabel": "Area / city",
+    "cityPlaceholder": "e.g. Jayanagar, Bengaluru or Hubballi",
+    "phoneLabel": "WhatsApp number",
+    "phonePlaceholder": "10-digit mobile number",
+    "phoneHelp": "We will only contact you about the pilot on this number.",
+    "langLabel": "Preferred language",
+    "trackCreditLabel": "How do you track credit today? (Optional)",
+    "trackCreditOptions": {
+      "notebook": "Notebook (Red book / Khata)",
+      "memory": "Memory / Mind",
+      "app": "Mobile app",
+      "none": "Don't give credit"
+    },
+    "consentText": "I agree GetLekka may contact me on WhatsApp/phone about the pilot. See Privacy Policy.",
+    "submitBtn": "Apply for Free Pilot",
+    "submitting": "Submitting...",
+    "successTitle": "Thank you for applying!",
+    "successMessage": "We'll contact you on WhatsApp within 3 days.",
+    "backHome": "Back to Home",
+    "badge": "Karnataka Pilot",
+    "safeNote": "We only use your details to contact you about the pilot."
+  },
+  "contactPage": {
+    "title": "Contact GetLekka",
+    "subtitle": "For mentors, incubators, partners, press, or questions about our pilot.",
+    "nameLabel": "Your name",
+    "emailLabel": "Email address",
+    "orgLabel": "Organisation / Company",
+    "messageLabel": "Message",
+    "submitBtn": "Send Message",
+    "submitting": "Sending...",
+    "successTitle": "Message sent!",
+    "successMessage": "Thank you. We'll get back to you shortly at your email address.",
+    "directEmailNotice": "Or email us directly at"
+  },
+  "notFound": {
+    "title": "This page went out for chai ☕",
+    "desc": "The page you are looking for doesn't exist or has moved.",
+    "homeBtn": "Back to Home",
+    "pilotBtn": "Join free pilot"
+  },
+  "meta": {
+    "home": {
+      "title": "GetLekka — Your shop's credit book on WhatsApp",
+      "description": "Send a voice note in Kannada, Hindi or English. GetLekka records udhaar, tracks payments and tells you who owes you money."
+    },
+    "pricing": {
+      "title": "Pricing — GetLekka",
+      "description": "Free during the pilot. Planned plans after pilot: Basic ₹149/month and Pro ₹299/month. Pricing may change."
+    },
+    "about": {
+      "title": "About — GetLekka",
+      "description": "Why we are building GetLekka: helping every small shop keep its accounts by simply speaking."
+    },
+    "pilot": {
+      "title": "Join the free pilot — GetLekka",
+      "description": "Apply for the free GetLekka pilot for shops in Karnataka. Keep your credit book on WhatsApp with voice notes."
+    },
+    "contact": {
+      "title": "Contact — GetLekka",
+      "description": "Mentors, incubators, partners and press: get in touch with the GetLekka team at getlekka.hello@gmail.com."
+    },
+    "privacy": {
+      "title": "Privacy Policy — GetLekka",
+      "description": "How GetLekka collects, uses and protects your information."
+    },
+    "terms": {
+      "title": "Terms of Service — GetLekka",
+      "description": "The terms that apply to the GetLekka website and free pilot."
+    }
+  },
+  "legal": {
+    "updated": "Last updated: 12 November 2026",
+    "draftNote": "This page is a draft and will be reviewed before launch.",
+    "privacy": {
+      "title": "Privacy Policy",
+      "sections": [
+        {
+          "h": "1. Who we are",
+          "p": [
+            "GetLekka is a WhatsApp voice assistant for small shops in India. You can reach us at getlekka.hello@gmail.com."
+          ]
+        },
+        {
+          "h": "2. What we collect",
+          "p": [
+            "Website: the details you type into our forms (name, shop name, shop type, area, WhatsApp number, preferred language, email and message). We use cookieless analytics, so no tracking cookies are set.",
+            "Product (pilot): shop details, your UPI ID, customer names and numbers that you add, credit and payment entries, and your voice notes."
+          ]
+        },
+        {
+          "h": "3. Why we collect it",
+          "p": [
+            "To run the service, to contact pilot shops, and to answer your messages."
+          ]
+        },
+        {
+          "h": "4. Where it is stored and for how long",
+          "p": [
+            "Data is stored with our hosting and service providers. We keep it only as long as needed for the pilot and the service, or until you ask us to delete it."
+          ]
+        },
+        {
+          "h": "5. Who we share it with",
+          "p": [
+            "Only service providers who help us run GetLekka: WhatsApp/Meta, speech-to-text, AI model and hosting providers. We never sell your data."
+          ]
+        },
+        {
+          "h": "6. Your rights",
+          "p": [
+            "You can ask to access, correct or delete your data at any time by emailing getlekka.hello@gmail.com. We follow India's Digital Personal Data Protection Act, 2023."
+          ]
+        },
+        {
+          "h": "7. Children",
+          "p": [
+            "GetLekka is not meant for people under 18."
+          ]
+        },
+        {
+          "h": "8. Security",
+          "p": [
+            "We never ask for your UPI PIN, OTP or bank password. We use HTTPS and limit access to your data to what is needed to run the service."
+          ]
+        },
+        {
+          "h": "9. Changes to this policy",
+          "p": [
+            "If we change this policy we will update the date at the top of this page."
+          ]
+        },
+        {
+          "h": "10. Contact and grievances",
+          "p": [
+            "For questions, requests or complaints, write to getlekka.hello@gmail.com."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "sections": [
+        {
+          "h": "1. The service",
+          "p": [
+            "GetLekka lets shop owners keep a credit book by sending voice notes on WhatsApp. The website describes the service and lets you apply for the free pilot."
+          ]
+        },
+        {
+          "h": "2. Pilot is provided as is",
+          "p": [
+            "The pilot is free and still in testing. Features may change, and the service may be interrupted or may make mistakes."
+          ]
+        },
+        {
+          "h": "3. You check your entries",
+          "p": [
+            "GetLekka shows every entry back to you. You are responsible for checking that entries are correct and for using Undo or correcting them."
+          ]
+        },
+        {
+          "h": "4. We keep records only",
+          "p": [
+            "GetLekka keeps records. It does not hold, move or collect money on your behalf."
+          ]
+        },
+        {
+          "h": "5. Acceptable use",
+          "p": [
+            "Please use GetLekka only for lawful business record-keeping, and do not misuse or attempt to disrupt the service."
+          ]
+        },
+        {
+          "h": "6. WhatsApp terms",
+          "p": [
+            "GetLekka works through WhatsApp, so WhatsApp's own terms and policies also apply to you."
+          ]
+        },
+        {
+          "h": "7. Limitation of liability",
+          "p": [
+            "To the extent allowed by law, GetLekka is not liable for losses arising from errors in entries, interruptions, or use of the pilot."
+          ]
+        },
+        {
+          "h": "8. Termination",
+          "p": [
+            "You can stop using GetLekka at any time. We may end or change the pilot, or stop access for misuse."
+          ]
+        },
+        {
+          "h": "9. Governing law",
+          "p": [
+            "These terms are governed by the laws of India, with courts in Karnataka having jurisdiction."
+          ]
+        },
+        {
+          "h": "10. Contact",
+          "p": [
+            "Questions? Write to getlekka.hello@gmail.com."
+          ]
+        }
+      ]
+    },
+    "toc": "On this page"
+  },
+  "builtFor": {
+    "heading": "Whatever your shop sells, the worry about credit is the same.",
+    "sub": "GetLekka is for small shopkeepers who give credit, take payments and keep customer accounts every day.",
+    "items": [
+      "Kirana shops",
+      "Medical stores",
+      "Tailor shops",
+      "Salons",
+      "Mobile repair shops",
+      "Other small businesses"
+    ]
+  },
+  "footer": {
+    "navigation": "Links",
+    "legal": "Legal",
+    "builtFor": "Starting in Karnataka, for small shopkeepers across India."
+  },
+  "forms": {
+    "required": "This field is required.",
+    "requiredSr": "required",
+    "errorSummary": "Please fix the highlighted fields.",
+    "phoneInvalid": "Please enter a valid 10-digit mobile number.",
+    "consentRequired": "Please agree to the consent checkbox to proceed.",
+    "emailInvalid": "Please enter a valid email address.",
+    "selectOption": "Select an option",
+    "sendFailed": "Sorry, we couldn't send your details. Please try again, or email us at getlekka.hello@gmail.com."
+  }
+}

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BoloLekka - WhatsApp AI Bookkeeping for Shop Owners</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#003423",
+            "tertiary-container": "#593d00",
+            "error-container": "#ffdad6",
+            "secondary": "#3d6655",
+            "tertiary-fixed-dim": "#f1be65",
+            "surface-bright": "#fbf9f2",
+            "surface-variant": "#e4e2dc",
+            "primary-fixed": "#b9eed3",
+            "tertiary-fixed": "#ffdeaa",
+            "inverse-surface": "#30312c",
+            "on-secondary-container": "#436d5b",
+            "surface-container-highest": "#e4e2dc",
+            "secondary-container": "#bfedd6",
+            "surface-container": "#f0eee7",
+            "secondary-fixed-dim": "#a4d0bb",
+            "outline-variant": "#c0c9c2",
+            "on-primary-container": "#86baa0",
+            "on-primary-fixed-variant": "#1c503b",
+            "primary-fixed-dim": "#9dd2b7",
+            "on-surface-variant": "#404944",
+            "on-surface": "#1b1c18",
+            "on-secondary-fixed": "#002116",
+            "on-error-container": "#93000a",
+            "surface-container-high": "#eae8e1",
+            "tertiary": "#3d2800",
+            "surface-container-low": "#f5f4ed",
+            "on-tertiary": "#ffffff",
+            "surface-tint": "#366852",
+            "primary-container": "#174b37",
+            "background": "#fbf9f2",
+            "on-secondary-fixed-variant": "#254e3e",
+            "on-primary-fixed": "#002115",
+            "on-background": "#1b1c18",
+            "inverse-primary": "#9dd2b7",
+            "on-error": "#ffffff",
+            "surface": "#fbf9f2",
+            "inverse-on-surface": "#f3f1ea",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#dcdad3",
+            "on-tertiary-fixed-variant": "#5f4100",
+            "on-tertiary-container": "#d7a750",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed": "#271900",
+            "error": "#ba1a1a",
+            "outline": "#717973",
+            "secondary-fixed": "#bfedd6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "margin-desktop": "2.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "space-sm": "0.5rem",
+            "gutter-desktop": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-sm": ["Inter"],
+            "headline-md": ["Inter"],
+            "label-lg": ["Noto Sans"],
+            "display-mobile": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-lg-mobile": ["Inter"],
+            "headline-lg": ["Inter"],
+            "label-md": ["Noto Sans"],
+            "body-lg": ["Inter"],
+            "display": ["Inter"],
+            "label-sm": ["Noto Sans"],
+            "body-md": ["Inter"]
+          },
+          "fontSize": {
+            "headline-sm": ["18px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}],
+            "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+            "display-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+            "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+            "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+            "display": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}],
+            "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .custom-shadow-resting {
+      box-shadow: 0 2px 8px rgba(16, 59, 44, 0.04), 0 1px 2px rgba(16, 59, 44, 0.02);
+    }
+    .custom-shadow-float {
+      box-shadow: 0 8px 24px rgba(16, 59, 44, 0.08), 0 2px 6px rgba(16, 59, 44, 0.04);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-primary min-h-screen">
+<!-- TOP APP BAR -->
+<header class="bg-surface border-b border-surface-container-highest docked full-width top-0 sticky z-40 shadow-sm">
+<div class="flex justify-between items-center w-full px-margin py-space-sm max-w-7xl mx-auto">
+<div class="flex items-center gap-space-xs">
+<img alt="BoloLekka Logo" class="w-8 h-8 rounded-lg object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDByhptg4Y6ySc3G3tFpHT0bPkqgEZ2HQb89Rjed6p8pZu5aegh0lr7GL6wvMi2aVm3KeW-tp1eV_e4-PTFxzvTeppRTeLCLH-ALcK4U2gmg8rk3Bm22Di3rDLhcGyYquCYJkYzsstsl2Js9rEEAeH79UgZu3Zh8RS-XdR7f9vv_c8z1dBo2p5PkgBP5QHCnOO2UmZg0t1fsdz2wFou3RARX0AeDZLe7KS8mOdSrj1uRg"/>
+<span class="text-headline-md font-headline-md font-bold text-primary tracking-tight">BoloLekka</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-full border border-surface-container-highest bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">language</span>
+<span>ಕನ್ನಡ / हिंदी / Eng</span>
+</button>
+<a class="flex items-center justify-center p-2 rounded-full bg-primary-container text-on-primary hover:bg-primary active:scale-95 transition-all shadow-sm" href="#trial">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+</div>
+</div>
+</header>
+<!-- HERO SECTION -->
+<section class="bg-surface px-margin pt-space-lg pb-space-xl border-b border-surface-container-highest">
+<div class="max-w-md mx-auto flex flex-col items-center text-center">
+<!-- Trust Badge -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low border border-on-tertiary-container/30 text-on-surface-variant font-label-sm text-label-sm mb-space-md custom-shadow-resting">
+<span class="material-symbols-outlined text-on-tertiary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>Trusted by 15,000+ Kirana &amp; Retail Shop Owners across Karnataka &amp; Bharat</span>
+</div>
+<!-- Main Headline -->
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile text-primary tracking-tight mb-space-xs">
+        Just speak or text on WhatsApp.<br/>Your Vyapar Lekka is done.
+      </h1>
+<p class="font-label-lg text-label-lg text-primary-container font-medium mb-space-md">
+        ವಾಟ್ಸಾಪ್‌ನಲ್ಲಿ ಮಾತನಾಡಿ ಸಾಕು, ನಿಮ್ಮ ಲೆಕ್ಕ ಪಕ್ಕಾ
+      </p>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-sm mb-space-lg">
+        No complicated software or accounting training. Record sales, track udhar (credit), send automatic payment reminders, and get daily profit reports in 10 seconds.
+      </p>
+<!-- CTAs -->
+<div class="w-full flex flex-col gap-space-sm mb-space-xl">
+<a class="w-full flex items-center justify-center gap-space-sm bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg py-3.5 px-space-lg rounded-2xl custom-shadow-float active:scale-95 transition-all" href="https://wa.me/" id="trial">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">forum</span>
+<span>Start on WhatsApp — Free 14-Day Trial</span>
+</a>
+<button class="w-full flex items-center justify-center gap-space-sm bg-surface-container-lowest text-primary-container border border-primary-container font-label-lg text-label-lg py-3 px-space-lg rounded-2xl custom-shadow-resting active:scale-95 transition-all">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span>Watch 1-Min Audio Demo</span>
+</button>
+</div>
+<!-- Smartphone Chat Mockup -->
+<div class="w-full bg-surface-container-lowest rounded-3xl p-3 border border-surface-container-highest custom-shadow-float text-left">
+<!-- Mockup WhatsApp Header -->
+<div class="flex items-center justify-between pb-2.5 mb-3 border-b border-surface-container-highest">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-bold text-xs relative">
+              BL
+              <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary-container border-2 border-surface-container-lowest"></span>
+</div>
+<div>
+<div class="flex items-center gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface text-sm">BoloLekka AI</span>
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block text-xs">Official WhatsApp Business</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">more_vert</span>
+</div>
+<!-- Chat Transcript Canvas -->
+<div class="space-y-3 bg-surface-container-low p-2.5 rounded-2xl">
+<!-- Voice Note Bubble (Incoming Shopkeeper) -->
+<div class="flex flex-col items-start max-w-[85%]">
+<div class="bg-surface-container-lowest p-2.5 rounded-2xl rounded-tl-none border border-surface-container-highest shadow-sm w-full">
+<div class="flex items-center gap-2 mb-1.5">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">mic</span>
+</div>
+<div class="flex-1 flex items-center gap-1">
+<span class="h-3 w-1 bg-primary rounded-full animate-pulse"></span>
+<span class="h-5 w-1 bg-primary-container rounded-full"></span>
+<span class="h-2 w-1 bg-outline-variant rounded-full"></span>
+<span class="h-4 w-1 bg-primary-container rounded-full"></span>
+<span class="h-6 w-1 bg-primary rounded-full"></span>
+<span class="h-3 w-1 bg-outline-variant rounded-full"></span>
+<span class="h-5 w-1 bg-primary rounded-full"></span>
+<span class="h-2 w-1 bg-outline-variant rounded-full"></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">0:04</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                "Ramesh ge 450 roopayi ration udhar kottini, 3 dinadalli kodtini andha"
+              </p>
+<div class="text-right mt-1 font-label-sm text-[10px] text-on-surface-variant">09:14 AM</div>
+</div>
+</div>
+<!-- Instantaneous AI Response Bubble -->
+<div class="flex flex-col items-end">
+<div class="bg-[#D9FDD3] border border-[#CCEEC6] p-3 rounded-2xl rounded-tr-none text-on-surface max-w-[90%] shadow-sm">
+<p class="font-body-md text-body-md font-medium text-primary mb-1">
+                ✅ Ramesh Account Updated!
+              </p>
+<div class="space-y-0.5 text-xs text-on-surface mb-2">
+<p>• Udhar: <strong>₹450</strong> added</p>
+<p>• Total Ramesh Pending: <strong class="text-error">₹1,250</strong></p>
+<p>• Auto reminder scheduled for Saturday.</p>
+</div>
+<div class="pt-1.5 border-t border-[#CCEEC6] flex items-center justify-between text-xs text-primary font-medium">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">receipt_long</span>
+                  📋 [View Bill]
+                </span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">09:14 AM ✓✓</span>
+</div>
+</div>
+</div>
+<!-- Chat Quick Action Buttons -->
+<div class="flex gap-1.5 justify-end">
+<button class="bg-surface-container-lowest text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full border border-surface-container-highest shadow-sm active:scale-95 transition-transform">
+              Send Bill on WhatsApp
+            </button>
+<button class="bg-surface-container-lowest text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full border border-surface-container-highest shadow-sm active:scale-95 transition-transform">
+              View Today's Total
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- THE PROBLEM WE SOLVE -->
+<section class="bg-surface-container-lowest px-margin py-space-xl">
+<div class="max-w-md mx-auto">
+<div class="inline-block px-2.5 py-0.5 rounded-md bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold tracking-wider uppercase mb-space-xs">
+        WHY DUKAANDARS LOSE MONEY
+      </div>
+<h2 class="text-headline-md font-headline-md text-primary mb-space-md">
+        Manual red books and complex apps cost you hours and lost udhar.
+      </h2>
+<div class="space-y-space-sm">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl border border-surface-container-highest custom-shadow-resting">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest text-primary flex items-center justify-center mb-space-xs border border-surface-container-highest">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Forgotten Udhar Khata</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Shopkeepers lose ₹18,000 to ₹35,000 every year simply because manual red books get misplaced or entries are forgotten.
+          </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl border border-surface-container-highest custom-shadow-resting">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest text-primary flex items-center justify-center mb-space-xs border border-surface-container-highest">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">timer_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">2 Hours of Night Accounting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Entering bills into desktop software after a tiring 12-hour day in the shop takes away precious family time.
+          </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl border border-surface-container-highest custom-shadow-resting">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest text-primary flex items-center justify-center mb-space-xs border border-surface-container-highest">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">record_voice_over</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Awkward Payment Chasing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Calling customers repeatedly for pending money feels uncomfortable and damages neighborhood relationships.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS (3-STEP PROCESS) -->
+<section class="bg-surface px-margin py-space-xl border-t border-b border-surface-container-highest">
+<div class="max-w-md mx-auto">
+<div class="text-center mb-space-lg">
+<span class="font-label-md text-label-md text-secondary font-medium uppercase tracking-wider block mb-1">HOW IT WORKS</span>
+<h2 class="text-headline-md font-headline-md text-primary">Simple as chatting with family</h2>
+</div>
+<div class="space-y-space-md relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl border border-surface-container-highest custom-shadow-resting">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm font-semibold">Step 1</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-sm">mic</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Speak or Type in Your Language</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Send a quick voice note in Kannada, Hindi, or English: <em>'Anand paid ₹800 via PhonePe'</em>.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl border border-surface-container-highest custom-shadow-resting">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm font-semibold">Step 2</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-sm">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">AI Records &amp; Reconciles</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            BoloLekka extracts items, amounts, customers, and updates your ledger automatically.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl border border-surface-container-highest custom-shadow-resting">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm font-semibold">Step 3</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-sm">mark_chat_unread</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Automatic Polite Reminders</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            One-tap WhatsApp payment links sent directly to customers with zero awkwardness.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CORE FEATURES -->
+<section class="bg-surface-container-lowest px-margin py-space-xl">
+<div class="max-w-md mx-auto">
+<div class="mb-space-lg">
+<span class="font-label-md text-label-md text-secondary font-medium uppercase tracking-wider block mb-1">EVERYTHING YOU NEED</span>
+<h2 class="text-headline-md font-headline-md text-primary">Engineered for real Indian shops</h2>
+</div>
+<div class="space-y-space-sm">
+<!-- Feature 1 (White card) -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl border border-surface-container-highest custom-shadow-resting">
+<div class="flex items-start gap-3">
+<div class="p-2.5 rounded-xl bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">interpreter_mode</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Voice-to-Ledger (ಧ್ವನಿ ಲೆಕ್ಕ)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Speak in local dialects; understands colloquial terms like 'chillar', 'udhar', 'jama'.
+              </p>
+</div>
+</div>
+</div>
+<!-- Feature 2 (Sage card) -->
+<div class="bg-surface-container-low p-space-md rounded-2xl border border-surface-container-highest custom-shadow-resting">
+<div class="flex items-start gap-3">
+<div class="p-2.5 rounded-xl bg-surface-container-lowest text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">1-Click WhatsApp Payment Links</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Customers can pay directly via UPI (GPay, PhonePe, Paytm). Money goes straight into your bank.
+              </p>
+</div>
+</div>
+</div>
+<!-- Feature 3 (White card) -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl border border-surface-container-highest custom-shadow-resting">
+<div class="flex items-start gap-3">
+<div class="p-2.5 rounded-xl bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">query_stats</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Daily 9 PM Profit &amp; Stock Summary</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Receive a neat WhatsApp report every night showing today's profit, cash in hand, and pending collections.
+              </p>
+</div>
+</div>
+</div>
+<!-- Feature 4 (Sage card) -->
+<div class="bg-surface-container-low p-space-md rounded-2xl border border-surface-container-highest custom-shadow-resting">
+<div class="flex items-start gap-3">
+<div class="p-2.5 rounded-xl bg-surface-container-lowest text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">GST &amp; Tax Ready Reports</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Download clean Excel/PDF reports with one click to hand directly to your auditor.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- LIVE PRODUCT INTERACTIVE DEMO / PREVIEW -->
+<section class="bg-surface px-margin py-space-xl border-t border-b border-surface-container-highest">
+<div class="max-w-md mx-auto">
+<div class="mb-space-md">
+<span class="font-label-md text-label-md text-secondary font-medium uppercase tracking-wider block mb-1">AUDIT DASHBOARD</span>
+<h2 class="text-headline-md font-headline-md text-primary">See your shop's numbers clearly</h2>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl p-4 border border-surface-container-highest custom-shadow-float">
+<!-- Date Header -->
+<div class="flex justify-between items-center mb-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Today: 14 Oct, 2025</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-primary font-label-sm text-[11px] font-semibold">Live Syncing</span>
+</div>
+<!-- Metric Bento Cards -->
+<div class="grid grid-cols-2 gap-2 mb-4">
+<div class="bg-surface-container-low p-3 rounded-xl border border-surface-container-highest col-span-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Today's Total Sales</span>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-headline-md text-headline-md text-primary">₹14,820</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm font-medium">+12% vs yest.</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-xl border border-surface-container-highest">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Udhar Collected</span>
+<p class="font-headline-sm text-headline-sm text-[#267A50] mt-0.5">₹6,400</p>
+</div>
+<div class="bg-surface-container-low p-3 rounded-xl border border-surface-container-highest">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Pending Collection</span>
+<p class="font-headline-sm text-headline-sm text-error mt-0.5">₹22,150</p>
+</div>
+</div>
+<!-- Live Feed items -->
+<span class="font-label-sm text-label-sm text-on-surface font-semibold block mb-2">Recent Shop Transactions</span>
+<div class="space-y-2">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low border border-surface-container-highest">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-primary flex items-center justify-center font-bold text-xs">
+                SK
+              </div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Suresh Kirana</p>
+<span class="font-label-sm text-[10px] text-on-surface-variant">10:42 AM • GPay</span>
+</div>
+</div>
+<div class="text-right">
+<p class="font-body-md text-body-md font-semibold text-primary">+₹1,420</p>
+<span class="px-2 py-0.5 rounded-full bg-[#CCEEC6] text-[#267A50] font-label-sm text-[10px] font-semibold">Collected</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low border border-surface-container-highest">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-xs">
+                MR
+              </div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Manjunath Rao</p>
+<span class="font-label-sm text-[10px] text-on-surface-variant">09:14 AM • Voice Udhar</span>
+</div>
+</div>
+<div class="text-right">
+<p class="font-body-md text-body-md font-semibold text-error">₹450</p>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-tertiary-container font-label-sm text-[10px] font-semibold border border-on-tertiary-container/30">Pending</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MULTILINGUAL SECTION -->
+<section class="bg-surface-container px-margin py-space-xl">
+<div class="max-w-md mx-auto">
+<div class="text-center mb-space-md">
+<span class="material-symbols-outlined text-primary text-3xl mb-1">translate</span>
+<h2 class="text-headline-md font-headline-md text-primary">
+          Made for Bharat, Speaks your Mother Tongue
+        </h2>
+</div>
+<div class="space-y-space-sm mb-space-md">
+<div class="bg-surface-container-lowest p-3.5 rounded-2xl border border-on-tertiary-container/30 custom-shadow-resting">
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-headline-sm text-sm font-semibold text-primary">ಕನ್ನಡ (Kannada)</span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface">ನಮ್ಮ ಊರಿನ ವ್ಯಾಪಾರಕ್ಕೆ ನಮ್ಮದೇ ಭಾಷೆ</p>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-2xl border border-on-tertiary-container/30 custom-shadow-resting">
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-headline-sm text-sm font-semibold text-primary">हिंदी (Hindi)</span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface">आपकी दुकान, आपका हिसाब, आपकी बोली</p>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-2xl border border-on-tertiary-container/30 custom-shadow-resting">
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-headline-sm text-sm font-semibold text-primary">English</span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface">Simplified business bookkeeping for modern retailers</p>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-full bg-surface-container-lowest border border-surface-container-highest text-primary font-label-md text-label-md custom-shadow-resting active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span>Tap to listen to voice entry in Kannada</span>
+</button>
+</div>
+</section>
+<!-- TRUST, SECURITY & RELIABILITY (Full-Width Deep Forest Green) -->
+<section class="bg-primary-container text-on-primary px-margin py-space-xl">
+<div class="max-w-md mx-auto">
+<div class="flex items-center gap-1.5 mb-2">
+<span class="material-symbols-outlined text-on-tertiary-container text-lg" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold tracking-wider uppercase">TRUST &amp; INTEGRITY</span>
+</div>
+<h2 class="text-headline-md font-headline-md text-on-primary mb-space-lg">
+        Bank-Grade Security for Your Hard-Earned Business
+      </h2>
+<div class="space-y-space-md">
+<div class="flex items-start gap-3">
+<div class="p-2 rounded-xl border border-on-primary-container/40 bg-primary text-on-primary">
+<span class="material-symbols-outlined text-xl">lock</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-1">256-Bit Financial Encryption</h3>
+<p class="font-body-md text-body-md text-on-primary-container">
+              Your data is encrypted and backed up in real-time on secure Indian servers.
+            </p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="p-2 rounded-xl border border-on-primary-container/40 bg-primary text-on-primary">
+<span class="material-symbols-outlined text-xl">security</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-1">Official WhatsApp Business API</h3>
+<p class="font-body-md text-body-md text-on-primary-container">
+              Verified Meta Business Partner; your business number stays secure.
+            </p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="p-2 rounded-xl border border-on-primary-container/40 bg-primary text-on-primary">
+<span class="material-symbols-outlined text-xl">shield</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-1">100% Privacy Guarantee</h3>
+<p class="font-body-md text-body-md text-on-primary-container">
+              Your ledger data is strictly private. We never share customer or sales data with third parties.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TRANSPARENT PRICING -->
+<section class="bg-surface px-margin py-space-xl">
+<div class="max-w-md mx-auto">
+<div class="text-center mb-space-lg">
+<span class="font-label-md text-label-md text-secondary font-medium uppercase tracking-wider block mb-1">SIMPLE PLANS</span>
+<h2 class="text-headline-md font-headline-md text-primary">
+          Transparent Pricing. Pays for itself in 3 days.
+        </h2>
+</div>
+<div class="space-y-space-md">
+<!-- Starter Plan -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl border border-surface-container-highest custom-shadow-resting">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Chhota Vyapar (Starter)</h3>
+<div class="my-2">
+<span class="text-display-mobile font-display-mobile text-primary">₹199</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/month</span>
+</div>
+<ul class="space-y-2 mb-space-md text-body-sm font-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+              300 voice entries per month
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+              Unlimited manual text entries
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+              1 registered WhatsApp number
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+              Standard PDF monthly reports
+            </li>
+</ul>
+<button class="w-full py-2.5 px-4 rounded-2xl border border-primary-container text-primary-container font-label-md text-label-md font-semibold active:scale-95 transition-all">
+            Choose Starter
+          </button>
+</div>
+<!-- Pro Plan (Recommended) -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl border-2 border-on-tertiary-container relative custom-shadow-float">
+<!-- Recommended Badge -->
+<div class="absolute -top-3 right-4 bg-tertiary-container text-on-tertiary font-label-sm text-label-sm px-3 py-0.5 rounded-full font-semibold border border-on-tertiary-container flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+            ★ MOST POPULAR FOR KIRANAS
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">Sampurna Vyapar (Pro)</h3>
+<div class="my-2">
+<span class="text-display-mobile font-display-mobile text-primary">₹399</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/month (Billed annually)</span>
+</div>
+<ul class="space-y-2 mb-space-md text-body-sm font-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<strong>Unlimited</strong> voice &amp; text entries
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+              Automated UPI payment links with zero fees
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+              Multi-staff access (up to 3 counter boys)
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+              Instant 1-click auditor report export
+            </li>
+</ul>
+<button class="w-full py-3 px-4 rounded-2xl bg-primary-container text-on-primary font-label-md text-label-md font-semibold custom-shadow-float active:scale-95 transition-all">
+            Get 14-Day Free Trial
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL HIGH-IMPACT CALL TO ACTION -->
+<section class="bg-[#103B2C] text-on-primary px-margin py-space-xl text-center">
+<div class="max-w-md mx-auto">
+<h2 class="text-headline-lg-mobile font-headline-lg-mobile font-bold text-white mb-space-xs">
+        Ready to stop losing money to forgotten Udhar? ✨
+      </h2>
+<p class="font-body-md text-body-md text-secondary-container mb-space-lg">
+        Join 15,000+ Indian shopkeepers who sleep peacefully every night.
+      </p>
+<a class="inline-flex items-center justify-center gap-2 w-full py-3.5 px-space-lg rounded-2xl bg-surface-container-lowest text-primary font-label-lg text-label-lg font-bold custom-shadow-float active:scale-95 transition-all mb-space-sm" href="https://wa.me/">
+<span>Start Free on WhatsApp Now ⚡</span>
+</a>
+<span class="font-label-sm text-label-sm text-secondary-container block mb-space-md">
+        No credit card needed • Set up in 60 seconds
+      </span>
+<div class="pt-space-md border-t border-primary-container flex items-center justify-center gap-1.5 text-on-primary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">support_agent</span>
+<span>Need help? Call or WhatsApp our Bangalore team at <strong>+91 80 4728 9000</strong></span>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer class="bg-primary dark:bg-inverse-surface border-t border-primary-container dark:border-outline-variant w-full">
+<div class="w-full px-margin md:px-margin-desktop py-space-xl max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-space-lg text-center md:text-left">
+<div class="flex flex-col items-center md:items-start gap-1">
+<span class="text-headline-md font-headline-md font-bold text-on-primary dark:text-inverse-on-surface">BoloLekka</span>
+<p class="text-body-sm font-body-sm text-on-primary-container dark:text-surface-variant max-w-xs">
+          © 2025 BoloLekka Vyapar AI Technologies Pvt. Ltd. Bank-grade 256-bit encryption. Made for Bharat.
+        </p>
+</div>
+<div class="flex flex-wrap justify-center gap-x-space-md gap-y-space-xs text-label-md font-label-md">
+<a class="text-on-primary-container dark:text-surface-variant hover:text-on-primary dark:hover:text-inverse-on-surface hover:underline transition-all duration-150" href="#security">Security &amp; Privacy</a>
+<a class="text-on-primary-container dark:text-surface-variant hover:text-on-primary dark:hover:text-inverse-on-surface hover:underline transition-all duration-150" href="#terms">WhatsApp Bookkeeping Terms</a>
+<a class="text-on-primary-container dark:text-surface-variant hover:text-on-primary dark:hover:text-inverse-on-surface hover:underline transition-all duration-150" href="#support">Support &amp; Demo</a>
+<a class="text-on-primary-container dark:text-surface-variant hover:text-on-primary dark:hover:text-inverse-on-surface hover:underline transition-all duration-150" href="#faqs">Vyapar FAQs</a>
+</div>
+</div>
+</footer>
+</body></html>

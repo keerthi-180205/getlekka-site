@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* 17px on phones, 18px on desktop (planner §2.5: older users, bright shop lighting) */
+  html {
+    font-size: 17px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (min-width: 1024px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  body {
+    @apply bg-surface text-on-surface antialiased;
+    line-height: 1.6;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  /* Kannada needs more line height and no negative tracking (conjuncts collide) */
+  html[lang^='kn'] body {
+    line-height: 1.75;
+  }
+  html[lang^='kn'] :is(h1, h2, h3, h4, .eyebrow) {
+    letter-spacing: 0 !important;
+  }
+  html[lang^='kn'] :is(h1, h2, h3, h4) {
+    line-height: 1.35 !important;
+  }
+
+  /* Kannada glyphs run wider than Latin: step headline sizes down so they keep to 2-3 lines */
+  html[lang^='kn'] .hero-title {
+    font-size: 1.75rem;
+  }
+  html[lang^='kn'] .section-title {
+    font-size: 1.65rem;
+  }
+  @media (min-width: 640px) {
+    html[lang^='kn'] .hero-title {
+      font-size: 2.2rem;
+    }
+    html[lang^='kn'] .section-title {
+      font-size: 2.1rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    html[lang^='kn'] .hero-title {
+      font-size: 2.55rem;
+    }
+    html[lang^='kn'] .section-title {
+      font-size: 2.3rem;
+    }
+  }
+
+  ::selection {
+    background: #bfedd6;
+    color: #003423;
+  }
+
+  :focus-visible {
+    outline: 3px solid #1f7a4d;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  .on-dark :focus-visible {
+    outline-color: #f2a93b;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6;
+  }
+
+  .section-y {
+    @apply py-16 md:py-24;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.14em];
+  }
+  html[lang^='kn'] .eyebrow {
+    @apply text-[0.8rem];
+  }
+
+  /* Warm hero backdrop: soft green + amber glows over cream, with a faint ledger grid */
+  .hero-bg {
+    background-color: #fbf9f2;
+    background-image: radial-gradient(60rem 36rem at 85% -10%, rgba(31, 122, 77, 0.14), transparent 60%),
+      radial-gradient(40rem 28rem at -5% 105%, rgba(242, 169, 59, 0.2), transparent 60%);
+  }
+  .ledger-grid {
+    background-image: linear-gradient(rgba(0, 52, 35, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 52, 35, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 85%);
+    mask-image: linear-gradient(to bottom, #000 0%, transparent 85%);
+  }
+  .ledger-grid-light {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Ruled "khata" page: faint lines + the red margin line of an Indian ledger book */
+  .paper {
+    position: relative;
+    background-color: #fffdf8;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 31px,
+      rgba(31, 122, 77, 0.09) 32px
+    );
+  }
+  .paper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 2.1rem;
+    width: 1px;
+    background: rgba(184, 64, 64, 0.35);
+  }
+
+  /* WhatsApp-style chat wallpaper */
+  .chat-wallpaper {
+    background-color: #efe7db;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23b8ab96' stroke-opacity='.35' stroke-width='1.2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='14' r='4'/%3E%3Cpath d='M44 12l6 6M50 12l-6 6'/%3E%3Cpath d='M20 50q4-6 8 0t8 0'/%3E%3Crect x='50' y='44' width='9' height='9' rx='2'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ---------- Chat mockup animation ----------
+   Bubbles 3 & 4 (and the typing dots) loop. Everything else is static.
+   Without `.chat-anim` (paused, or reduced motion) every bubble is simply visible. */
+@media (prefers-reduced-motion: no-preference) {
+  .chat-anim .chat-b3 {
+    animation: chat-b3 13s ease-out infinite;
+  }
+  .chat-anim .chat-typing {
+    animation: chat-typing 13s ease-out infinite;
+  }
+  .chat-anim .chat-b4 {
+    animation: chat-b4 13s ease-out infinite;
+  }
+  .chat-anim .chat-dot {
+    animation: chat-dot 1s ease-in-out infinite;
+  }
+  .chat-anim .chat-dot:nth-child(2) {
+    animation-delay: 0.15s;
+  }
+  .chat-anim .chat-dot:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+}
+@keyframes chat-b3 {
+  0%,
+  14% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  19%,
+  90% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+@keyframes chat-typing {
+  0%,
+  22% {
+    opacity: 0;
+  }
+  25%,
+  34% {
+    opacity: 1;
+  }
+  36%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes chat-b4 {
+  0%,
+  34% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  40%,
+  90% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+@keyframes chat-dot {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+/* The typing dots are a transient state: hidden unless the animation is running */
+.chat-typing {
+  opacity: 0;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
